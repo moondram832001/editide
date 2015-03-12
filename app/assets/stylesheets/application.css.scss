@@ -2,6 +2,7 @@
 // Variables, customize bootstrap here
 //-----------------------------------------
 @import 'variables';
+@import 'editide';
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -17,3 +18,5 @@
   @extend .col-sm-8;
   @extend .col-sm-offset-2;
 }
+
+

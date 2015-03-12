@@ -1,0 +1,13 @@
+/**
+* editide Module;
+*
+* Description
+*/
+var editide = angular.module('editide', ["ngResource", "ngRoute"]);
+
+editide.config(['$routeProvider', function($routeProvider) {
+        $routeProvider.
+                when('/home', {templateUrl: '<%= asset_path('landing.html' )%>',   controller: 'LandingCtrl'}).
+                otherwise({redirectTo: '/home'});
+}]);
+

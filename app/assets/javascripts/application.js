@@ -17,5 +17,5 @@
 //= require angular-animate
 //= require angular-resource
 //= require angular-route
-//= require angular_app
+//= require editide_app
 //= require_tree ./controllers
