@@ -3,7 +3,12 @@ editide.controller('LandingCtrl', ['$scope', function ($scope) {
 	$scope.aceModel = "";
 	$scope.sassModel = "";
 	$scope.jsModel = "";
-	
+
+	$scope.updateIframe = function() {
+         document.getElementById('myfrmme').contentWindow.updatedata($scope.src_render);
+         document.getElementById('mymobile').contentWindow.updatedata($scope.src_render);
+     };
+
 
 	$scope.aceLoaded = function(_editor) {
 	    // Options
@@ -13,7 +18,7 @@ editide.controller('LandingCtrl', ['$scope', function ($scope) {
 	       _editor.setOptions({
 	        enableBasicAutocompletion: true,
 	        enableSnippets: true,
-	        enableLiveAutocompletion: true,
+	  //      enableLiveAutocompletion: true,
 	        fontSize: '20px',
 	        displayIndentGuides: true,
 	        firstLineNumber: 1,
@@ -28,6 +33,10 @@ editide.controller('LandingCtrl', ['$scope', function ($scope) {
 	  };
 
 	  $scope.aceChanged = function() {
+    
+	     $scope.src_render = $scope.aceModel;
+	    
+	     $scope.updateIframe();
 
 	  }
 

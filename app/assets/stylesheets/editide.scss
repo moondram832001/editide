@@ -19,6 +19,10 @@
 // 	padding-right: 0 ;
 // }
 
+body {
+	overflow:hidden;
+}
+
 @mixin sidebar-x-mixin() {
 	@include make-md-column(1);
 }
@@ -60,5 +64,12 @@
 	.js-editor{
 		@include size(33.33%,35%);
 	}
+	.mobile-view{
+		@include size(30%,65%);
+		float: left;
+	}
+	.desktop-view{
+		@include size(70%,65%);
+	}	
 }
 

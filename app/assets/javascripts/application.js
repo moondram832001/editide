@@ -13,11 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require angular
-//= require angular-animate
-//= require angular-resource
-//= require angular-route
-//= require angular-sanitize
 //= require ui-ace
 //= require editide_app
 //= require_tree ./controllers

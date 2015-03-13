@@ -5,11 +5,11 @@
   %body{ :class => "#{ controller.controller_name }", "ng-app" => "editide"}
     = render 'chromeframe'
     / = render 'header'
-    = render 'flashes'
+    / = render 'flashes'
 
     = yield
 
-    = render 'footer'
+    / = render 'footer'
 
     -# Javascript at the bottom for fast page loading
     = render 'javascripts'
