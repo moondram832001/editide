@@ -1,0 +1,64 @@
+.custom-header {
+	color: #f00;
+	background-color: #000;
+}
+
+.sidebar {
+	position: fixed;
+	display: block;
+	top: 51px;
+	bottom: 0;
+	z-index: 1000;
+	min-height: 100%;
+	max-height: none;
+	overflow: auto;
+}
+
+// .sidebar-x {
+// 	padding-left: 0 ;
+// 	padding-right: 0 ;
+// }
+
+@mixin sidebar-x-mixin() {
+	@include make-md-column(1);
+}
+
+@mixin full-height-column($column,$gutter) {
+	@include make-md-column(1,0px);
+	min-height: 100%;
+}
+
+.sidebar-x {
+	@include make-md-column(1,0px);
+	min-height: 100%;
+}
+
+.mainbar-x {
+	@include make-md-column(11,0px);
+	min-height: 100%;
+}
+
+.sidebar-full-hyte {
+	width: $sidebar-width;
+	float: left;
+	height: 100vh;
+	background-color: black;
+}
+
+.mainbar-full-hyte {
+	@include calc(width, "100% - #{$sidebar-width}");
+	margin-left: $sidebar-width;
+	height: 100vh;
+	.html-editor {
+		@include size(43.33%,35%);
+		float: left;
+	}
+	.sass-editor{
+		@include size(23.33%,35%);
+		float: left;
+	}
+	.js-editor{
+		@include size(33.33%,35%);
+	}
+}
+

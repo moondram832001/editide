@@ -3,7 +3,7 @@
 *
 * Description
 */
-var editide = angular.module('editide', ["ngResource", "ngRoute"]);
+var editide = angular.module('editide', ["ngResource", "ngRoute",'ngSanitize','ui.ace']);
 
 editide.config(['$routeProvider', function($routeProvider) {
         $routeProvider.
