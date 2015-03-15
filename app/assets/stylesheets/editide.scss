@@ -14,10 +14,7 @@
 	overflow: auto;
 }
 
-// .sidebar-x {
-// 	padding-left: 0 ;
-// 	padding-right: 0 ;
-// }
+
 
 body {
 	overflow:hidden;
@@ -52,20 +49,8 @@ body {
 	color: #aaa;
 	@include transition(all .3s ease 0s);
 	@include transition-delay(0.2s);
-	//transition: all 0.3s ease 0s;
-    // -webkit-transition: -webkit-transform 400ms ease;
-    // -moz-transition: -moz-transform 400ms ease;
-    // -o-transition: transform 400ms ease;
-    // transition: transform 400ms ease;
 	&:hover{
 		background-color: #444;
-		// width: $sidebar-width + 25px;
-		//transform:scaleX(2.5);
-		// -webkit-transform: translate(60%,0);
-	 //    -moz-transform: translate(60%,0);
-	 //    -ms-transform: translate(60%,0);
-	 //    -o-transform: translate(60%,0);
-	 //    transform: translate(60%,0);
 		 width: 300px;
 		 left:-150px;
 		 color:#aaa;
@@ -95,10 +80,6 @@ body {
 		position: relative;
 		top:20%;
 		height: 30%;
-		//width: 20px;
-		.glyphikon {
-		
-		}
 	}	
 	.nav-side-menu {
 		z-index: inherit;
@@ -114,13 +95,10 @@ body {
 		padding-top: 5px;
 		margin-top: 5px;
 		margin-bottom: 3px;
-	//	border-bottom: 1px solid ;
-		//border-bottom-color: #555;
 		height: 30px;
 		width: 200px;
 		line-height: 20px;
 		left:200px;
-		//top:1px;
 		z-index: 3000;
 		cursor: pointer;
 		@include transition(all .2s ease 0s);
@@ -143,10 +121,8 @@ body {
 					color: #fff;
 				}				
 			}
-			
 		}
 	}
-
 }
 
 
