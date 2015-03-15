@@ -26,18 +26,11 @@ myAppModule.controller('IframeCtrl', [ '$scope', '$sce', '$compile',function($sc
       markup : '<div><h1>hello world !</h1></div>'
     };
 
-        $scope.js_code = "";
 
-        $scope.renderHtml = function(html_code)
-        {
-            return $sce.trustAsHtml(html_code);
-        };
-
-          // $scope.$watch(function() {return $scope.js_code;}, function(newValue, oldValue) {
-          //      // if ($scope.js_code.length > 0) {
-          //           console.log($scope.js_code);
-          //       //}
-          // });
+  $scope.renderHtml = function(html_code)
+  {
+      return $sce.trustAsHtml(html_code);
+  };
 
         window.updatedata = function(data) {
           $scope.$apply(function(){
@@ -45,33 +38,10 @@ myAppModule.controller('IframeCtrl', [ '$scope', '$sce', '$compile',function($sc
             $scope.value = data;
             $scope.rendered_value = $scope.value;
     //        console.log("applied changes");
-            $scope.iframe_agent.markup =  '<div>' + $scope.value.toString() + '</div>';
+            $scope.iframe_agent.markup = '<div>' + $scope.value.toString() + '</div>';
             //$scope.iframe_agent.markup = $scope.value.toString();
           });
         };
-
-         window.updatedata_js = function(data) {
-          $scope.$apply(function(){          
-            $scope.js_code = data.toString();
-          });
-        //  console.log($scope.js_code);
-
-          try {
-                //eval(data.toString()); 
-
-          }
-          catch(e) {
-              // document.write ("Error Message: " + e.message);
-              // document.write ("<br />");
-              // document.write ("Error Code: ");
-              // document.write (e.number & 0xFFFF);
-              // document.write ("<br />");
-              // document.write ("Error Name: " + e.name);
-          }
-
-
-         };
-
     $scope.rendered_value = $scope.value;
 
 
@@ -81,12 +51,10 @@ myAppModule.controller('IframeCtrl', [ '$scope', '$sce', '$compile',function($sc
 
 myAppModule.directive('myCustomer', ['$interval','$compile',function($interval,$compile) {
   var directive_obj = {};
-  
+
   var post_func = function(scope ,elem) {
     console.log("hi there from post link to : " + scope.iframe_agent.name + parent);
     
-    var js_changed = false;
-
     // window.updatedata = function(data) {
     //     scope.$apply(function(){
     //       scope.iframe_agent.markup = data;
@@ -95,27 +63,6 @@ myAppModule.directive('myCustomer', ['$interval','$compile',function($interval,$
     // //  elem.children().replaceWith($compile(data)(scope));
     // //  applychanges(data);
     //   }
-
-
-    scope.$watch('js_code', function(newValue, oldValue) {
-                if (scope.js_code.length > 0) {
-                 //   console.log(newValue);
-                }
-          js_changed = true;          
-    });
-
-    var timeoutId = $interval(function() {
-      if(js_changed) {
-          //console.log("change detected");
-          try {
-                eval(scope.js_code); 
-          }
-          catch(e) {
-          
-          }
-          js_changed = false;
-      }
-    },1000);
 
     console.log(elem.parent());
     scope.$watch(' iframe_agent.markup', function() {

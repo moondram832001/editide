@@ -43,11 +43,113 @@ body {
 }
 
 .sidebar-full-hyte {
-	width: $sidebar-width;
-	float: left;
+	width: 150px;
 	height: 100vh;
-	background-color: black;
+	left: -100px;
+	background-color: #ddd;
+	position: absolute;
+	z-index: 1000;
+	color: #aaa;
+	@include transition(all .3s ease 0s);
+	@include transition-delay(0.2s);
+	//transition: all 0.3s ease 0s;
+    // -webkit-transition: -webkit-transform 400ms ease;
+    // -moz-transition: -moz-transform 400ms ease;
+    // -o-transition: transform 400ms ease;
+    // transition: transform 400ms ease;
+	&:hover{
+		background-color: #444;
+		// width: $sidebar-width + 25px;
+		//transform:scaleX(2.5);
+		// -webkit-transform: translate(60%,0);
+	 //    -moz-transform: translate(60%,0);
+	 //    -ms-transform: translate(60%,0);
+	 //    -o-transform: translate(60%,0);
+	 //    transform: translate(60%,0);
+		 width: 300px;
+		 left:-150px;
+		 color:#aaa;
+	 }
+	.logo {
+		@include size(50px,50px);
+	    left:66.66%;
+	    //left: -50px;
+	    bottom: 10%;
+	    //z-index: 2000;
+	    position: absolute;
+	    overflow: hidden;
+	}
+	.icon-item {
+		position: fixed;
+		color:inherit;
+		z-index: 3000;
+		width: 20px;
+		height: 30px;
+		left:9px;
+		top:20%;
+		//border-left: 3px solid white;
+		font-size: 30px;
+	}
+	.menu{
+		overflow: hidden;
+		position: relative;
+		top:20%;
+		height: 30%;
+		//width: 20px;
+		.glyphikon {
+		
+		}
+	}	
+	.nav-side-menu {
+		z-index: inherit;
+		left: 60%;
+		height: 200px;
+		width: 100%;
+		position: relative;
+		cursor: pointer;
+	}
+	.menu-item {
+		color:inherit;
+		position: relative;
+		padding-top: 5px;
+		margin-top: 5px;
+		margin-bottom: 3px;
+	//	border-bottom: 1px solid ;
+		//border-bottom-color: #555;
+		height: 30px;
+		width: 200px;
+		line-height: 20px;
+		left:200px;
+		//top:1px;
+		z-index: 3000;
+		cursor: pointer;
+		@include transition(all .2s ease 0s);
+		&:hover{
+			color: #fff;
+		}
+
+		.menu-content{
+			padding-left: 3px;
+			list-style: none;
+			//margin-top: 5px;
+			padding-top: 5px;
+			padding-bottom: 7px;
+			.list-item{
+				font-size: 13px;
+				line-height: 20px;
+				color: #999;
+				@include transition(all .2s ease 0s);
+				&:hover{
+					color: #fff;
+				}				
+			}
+			
+		}
+	}
+
 }
+
+
 
 .mainbar-full-hyte {
 	@include calc(width, "100% - #{$sidebar-width}");
@@ -72,4 +174,5 @@ body {
 		@include size(70%,65%);
 	}	
 }
+
 
