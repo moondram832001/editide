@@ -2,7 +2,8 @@
   %meta{ :charset => 'utf-8' }/
   %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1' }/
 
-  = display_meta_tags :site => 'Seed Site', :title => page_title, :reverse => true
+  = display_meta_tags :site => 'editide', :title => page_title, :reverse => true
+  = favicon_link_tag 'editrials.png', rel: 'shortcut icon', type: 'image/png'
 
   %meta{ :name => 'description', :content => '' }/
   %meta{ :name => 'viewport', :content => 'width=device-width' }/
@@ -10,10 +11,8 @@
   = render 'stylesheets'
   = javascript_include_tag 'modernizr'
   
-  = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js" 
-  = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-route.min.js" 
-  = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-sanitize.min.js" 
-  = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-resource.min.js" 
+  / = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js" 
+  
 
   = javascript_include_tag 'ace-builds/src-min-noconflict/ace'
   = javascript_include_tag 'ace/ext-language_tools'

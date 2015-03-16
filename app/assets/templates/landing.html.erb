@@ -7,7 +7,7 @@
 					<!-- <span class="glyphicon glyphicon-menu-down" aria-hidden="true"> -->
 				    <div class="menu-item">
 				    <div class="brand toggle-btn" data-toggle="collapse" data-target="#menu-content">Themes</div>
-				   				  
+
 				        <div class="menu-list">
 				  
 				            <ul id="menu-content" class="menu-content collapse out">
@@ -22,13 +22,11 @@
 				                <li  ng-click="set_theme(themes.monokai)" data-toggle="collapse" class="list-item">
 				                 Monokai <span class="arrow"></span>
 				                </li>
-				   
 				            </ul>
 				     </div>
 				</div>
-
 			</div>
-		 	<img class="logo" src="<%= asset_path('editrials1.svg' )%>"></img>	 
+		 	<img class="logo" src="<%= asset_path('editide.svg' )%>"></img>	 
 		</div>
 		<div class="mainbar-full-hyte">
 			<div  class="editor-html-header" ui-ace="{
@@ -36,13 +34,11 @@
 				}" ng-model="html_headerModel">
 			</div>
 			<div  class="editor-sass-header" ui-ace="{
-				  onLoad: headerLoaded,
-				  onChange: headerChanged
+				  onLoad: headerLoaded
 				}" ng-model="sass_headerModel">
 			</div>
 			<div  class="editor-js-header" ui-ace="{
-				  onLoad: headerLoaded,
-				  onChange: headerChanged
+				  onLoad: headerLoaded
 				}" ng-model="js_headerModel">
 			</div>
 			<div  class="html-editor" ui-ace="{
