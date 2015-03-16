@@ -12,3 +12,5 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( splash.css scrollReveal.js )
 
 Rails.application.config.assets.precompile += %w( chartkick.js )
+
+Rails.application.config.assets.precompile += %w( iframe_app.js )

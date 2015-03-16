@@ -31,6 +31,20 @@
 		 	<img class="logo" src="<%= asset_path('editrials1.svg' )%>"></img>	 
 		</div>
 		<div class="mainbar-full-hyte">
+			<div  class="editor-html-header" ui-ace="{
+				  onLoad: headerLoaded
+				}" ng-model="html_headerModel">
+			</div>
+			<div  class="editor-sass-header" ui-ace="{
+				  onLoad: headerLoaded,
+				  onChange: headerChanged
+				}" ng-model="sass_headerModel">
+			</div>
+			<div  class="editor-js-header" ui-ace="{
+				  onLoad: headerLoaded,
+				  onChange: headerChanged
+				}" ng-model="js_headerModel">
+			</div>
 			<div  class="html-editor" ui-ace="{
 				  onLoad: aceLoaded,
 				  onChange: aceChanged
