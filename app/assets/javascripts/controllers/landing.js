@@ -69,20 +69,6 @@ editide.controller('LandingCtrl', ['$scope', function ($scope) {
 
 	  };
 
-	  $scope.headerChanged = function() {
-	     
-
-	  }
-
-
-
-
-
-
-
-
-
-
 	$scope.aceLoaded = function(_editor) {
 	    // Options
 	   // _editor.setReadOnly(true);
