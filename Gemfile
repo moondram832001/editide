@@ -53,6 +53,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'cucumber-rails', require: false
+  gem 'selenium-webdriver'
+  gem "chromedriver-helper"
+  gem 'capybara-angular'
+  gem 'spreewald'
   gem 'guard-rspec'
   gem 'guard-cucumber'
   gem 'database_cleaner'
