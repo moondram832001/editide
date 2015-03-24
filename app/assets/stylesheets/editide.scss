@@ -130,15 +130,15 @@ body {
 	margin-left: $sidebar-width;
 	height: 100vh;
 	.editor-html-header {
-		@include size(43.33%,4%);
+		@include size(43.33%,15px);
 		float: left;
 	}
 	.editor-sass-header {
-		@include size(23.33%,4%);
+		@include size(23.33%,15px);
 		float: left;
 	}
 	.editor-js-header {
-		@include size(33.33%,4%);
+		@include size(33.33%,15px);
 	}
 	.html-editor {
 		@include size(43.33%,31%);
@@ -152,11 +152,12 @@ body {
 		@include size(33.33%,31%);
 	}
 	.mobile-view{
-		@include size(30%,65%);
+		@include size(30%,calc(100% - (15px + 31%)));
 		float: left;
+		border-right: 1px solid #ddd;
 	}
 	.desktop-view{
-		@include size(70%,65%);
+		@include size(70%,calc(100% - (15px + 31%)));
 	}
 
 }
