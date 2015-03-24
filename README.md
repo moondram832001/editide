@@ -15,7 +15,7 @@ editide uses a number of open source projects to serve its purpose:
 * [jQuery] 
 * [Ruby On Rails] 
 
-### Todo's
+### Todos
 
  - Write more tests
  - Add SASS/JS compilation support
